@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CorpID认证查询</title>
+<link rel="stylesheet" href="https://agiso-web-fronts.oss-cn-zhangjiakou.aliyuncs.com/commonTiqu/front/1.0.0/assets/index-6dcd9428.css">
+</head>
+<body>
+<div id="app" data-v-app="">
+        <div data-v-3520cc98="" class="van-swipe swiper">
+               <div class="van-swipe__track" style="transition-duration: 0ms; transform: translateX(0px); width: 768px;">
+                    <div data-v-3520cc98="" class="van-swipe-item" style="width: 768px;">
+                    <img data-v-3520cc98="" class="swiper-img w-full" src="https://gw.alicdn.com/imgextra/i4/O1CN017tMvJS1jaMdFd8RSv_!!6000000004564-2-tps-640-368.png" alt="">
+                    </div>
+               </div>
+               <div data-v-3520cc98="" class="relative bottom-94 w-full text-center">
+               <span data-v-3520cc98="" class="indicator active"></span>
+               </div>
+        </div>
+
+                   <div data-v-3520cc98="" class="card relative z-10 p-36 -mt-46 mx-24 mb-24 rounded-20 bg-white">
+                   <h1 data-v-3520cc98="" class="mb-36 text-36 text-gray-900 text-center"> 认证查询系统 </h1>
+                   <input data-v-3520cc98="" class="h-96 w-full py-26 px-24 rounded-12 bg-gray-100 text-30 text-gray-900" type="text" id="corpidInput" placeholder="请输入corpid"><button data-v-3520cc98="" class="primary w-full mt-52 mb-36" onclick="jumpToDingTalk()">立即查询</button>
+                   </div>
+                   <span data-v-3520cc98="" class="block text-20 text-gray-400 text-center copyRight"> 技术支持 · 钉小二 </span>
+</div>
+    <script>
+        function jumpToDingTalk() {
+            const corpid = document.getElementById('corpidInput').value;
+            if (corpid) {
+                const url = `https://wx-in-i.dingtalk.com/yydy/yq.html?encodeDeptId=null&corpId=${corpid}`;
+                window.location.href = url;
+            } else {
+                alert('请先输入corpid！');
+            }
+        }
+    </script>
+</body>
+</html>
